@@ -1,10 +1,16 @@
 require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
+const dashboardRoutes = require('./routes/dashboardRoutes');
 
+// express app
 const app = new express();
 
+// middleware
+app.use(express.json());
 
+app.use('/api/events', dashboardRoutes);
 
 
 

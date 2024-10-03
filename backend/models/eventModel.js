@@ -5,12 +5,12 @@ const eventsSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    info: {
+    date: {
         type: String,
         required: true
     },
-    rsvp: {
-        type: Boolean,
+    location: {
+        type: String,
         required: true
     }
 })
