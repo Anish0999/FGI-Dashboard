@@ -1,13 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
 
 function App() {
 
+  const[showEvent, setShowEvent] = useState(false);
+
+  const handleEvent = () => {
+      setShowEvent(true);
+  }
+
   return (
     <>
-     
+    <div className='top'>
+     <button onClick = {handleEvent}>Add event</button>
+      {showEvent && <div className = 'new-event'></div> }
+     </div>
+
     </>
   )
 }
